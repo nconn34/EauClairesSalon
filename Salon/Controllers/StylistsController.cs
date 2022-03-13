@@ -8,7 +8,7 @@ namespace Salon.Controllers
 {
   public class StylistsController : Controller
   {
-    private readonly StylistContext _db;
+    private readonly SalonContext _db;
 
     public StylistsController(SalonContext db)
     {
@@ -29,7 +29,7 @@ namespace Salon.Controllers
     [HttpPost]
     public ActionResult Create(Stylist stylist)
     {
-      _db.Categories.Add(stylist);
+      _db.Stylists.Add(stylist);
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
@@ -41,7 +41,7 @@ namespace Salon.Controllers
     }
     public ActionResult Edit(int id)
     {
-      var thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
+      var thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistsId == id);
       return View(thisStylist);
     }
 
