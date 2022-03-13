@@ -10,7 +10,7 @@ namespace Salon.Controllers
   {
     private readonly StylistContext _db;
 
-    public StylistsController(ToDoListContext db)
+    public StylistsController(SalonContext db)
     {
       _db = db;
     }
