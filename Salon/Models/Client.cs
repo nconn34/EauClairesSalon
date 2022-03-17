@@ -6,5 +6,6 @@ namespace Salon.Models
     public string ClientName { get; set; }
     public int StylistsId { get; set; }
     public virtual Stylist Stylist { get; set; }
+
   }
 }

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Salon.Models
 {
@@ -6,11 +7,11 @@ namespace Salon.Models
   {
     public Stylist()
     {
-      this.Stylists = new HashSet<Stylist>();
+      this.Clients = new HashSet<Client>();
     }
-
+    [Key]
     public int StylistsId { get; set; }
     public string Name { get; set; }
-    public virtual ICollection<Stylist> Stylists { get; set; }
+    public virtual ICollection<Client> Clients { get; set; }
   }
 }
